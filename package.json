@@ -1,0 +1,50 @@
+{
+  "name": "menv-npm",
+  "version": "0.1.4",
+  "description": "Managed environment variables for Node.js",
+  "type": "module",
+  "bin": {
+    "menv": "./dist/index.js",
+    "menv-npm": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint \"src/**/*.ts\"",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "env",
+    "dotenv",
+    "configuration",
+    "validator",
+    "security"
+  ],
+  "author": "Daniel Dallas Okoye <dev@thedanieldallas.com> (https://thedanieldallas.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanielDallas/menv.git"
+  },
+  "homepage": "https://menv.thedanieldallas.com/",
+  "bugs": {
+    "url": "https://github.com/DanielDallas/menv/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "cac": "^6.7.14",
+    "picocolors": "^1.0.0",
+    "chokidar": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5",
+    "vitest": "^2.0.0",
+    "eslint": "^9.0.0"
+  }
+}

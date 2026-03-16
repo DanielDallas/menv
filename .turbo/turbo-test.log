@@ -1,0 +1,17 @@
+
+
+> menv@0.1.0 test
+> vitest run
+
+[1G[0K
+[7m[1m[36m RUN [39m[22m[27m [36mv1.6.1[39m [90m/Users/danieldallasokoye/Desktop/MENV-NPM/packages/cli[39m
+
+ [32m✓[39m [2msrc/core/__tests__/[22menvGenerator[2m.spec.ts[22m[2m (2)[22m
+ [32m✓[39m [2msrc/core/__tests__/[22menvParser[2m.spec.ts[22m[2m (3)[22m
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[32m5 passed[39m[22m[90m (5)[39m
+[2m   Start at [22m 06:47:08
+[2m   Duration [22m 345ms[2m (transform 130ms, setup 0ms, collect 131ms, tests 6ms, environment 0ms, prepare 166ms)[22m
+
+[?25h[1G[0K⠙[1G[0K

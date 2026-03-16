@@ -1,0 +1,11 @@
+
+# Menv: Environment file protection
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+node_modules
+dist
+!.env.example
+!.env.sample
