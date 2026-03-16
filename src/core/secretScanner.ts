@@ -28,7 +28,7 @@ const PATTERNS = [
   { name: "AWS Access Key ID", regex: /AKIA[0-9A-Z]{16}/ },
   {
     name: "AWS Secret Access Key",
-    regex: /(?<![A-Za-z0-9])[A-Za-z0-9\/+]{40}(?![A-Za-z0-9\/+])/,
+    regex: /(?<![A-Za-z0-9])[A-Za-z0-9/+]{40}(?![A-Za-z0-9/+])/,
   },
 
   // Paystack (Check before Stripe as it's more specific/longer)
@@ -102,7 +102,7 @@ export function scanSecrets(lines: EnvLine[]): SecretIssue[] {
   lines.forEach((line, index) => {
     if (!line.key) return;
 
-    for (const pattern of PATTERNS as any[]) {
+    for (const pattern of PATTERNS) {
       const match =
         line.value.match(pattern.regex) || line.raw.match(pattern.regex);
       if (match) {

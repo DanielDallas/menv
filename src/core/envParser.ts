@@ -31,9 +31,9 @@ export function parseEnv(content: string): EnvLine[] {
       continue;
     }
 
-    let [, key, value, comment] = match;
-    key = key.trim();
-    value = value.trim();
+    const [, rawKey, rawValue, comment] = match;
+    const key = rawKey.trim();
+    let value = rawValue.trim();
 
     // Remove surrounding quotes if present
     if (

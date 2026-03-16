@@ -57,7 +57,7 @@ export async function ensureGitignore() {
     }
 
     await fs.writeFile(gitignorePath, newContent);
-  } catch (error) {
+  } catch {
     // We don't want to crash the tool if .gitignore update fails,
     // but we should warn the user.
     console.warn(
