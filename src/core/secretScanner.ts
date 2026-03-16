@@ -1,5 +1,12 @@
 import { EnvLine } from "./envParser.js";
 
+export interface Pattern {
+  name: string;
+  regex: RegExp;
+  minEntropy?: number;
+  keyPattern?: RegExp;
+}
+
 export interface SecretIssue {
   key: string;
   type: string;
@@ -29,6 +36,7 @@ const PATTERNS = [
   {
     name: "AWS Secret Access Key",
     regex: /(?<![A-Za-z0-9])[A-Za-z0-9/+]{40}(?![A-Za-z0-9/+])/,
+    keyPattern: /AWS|SECRET|PASSWORD|TOKEN|KEY/i, // Suspected key names
   },
 
   // Paystack (Check before Stripe as it's more specific/longer)
@@ -110,6 +118,11 @@ export function scanSecrets(lines: EnvLine[]): SecretIssue[] {
         if (pattern.minEntropy) {
           const entropy = calculateEntropy(match[0]);
           if (entropy < pattern.minEntropy) continue;
+        }
+
+        // If pattern has a key name restriction, check it
+        if (pattern.keyPattern && !pattern.keyPattern.test(line.key)) {
+          continue;
         }
 
         issues.push({

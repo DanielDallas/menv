@@ -17,53 +17,55 @@ Menv is a lightweight CLI designed to bring consistency, safety, and automation 
 
 ## Installation
 
-For the best experience, install Menv globally to use it in any project:
-
 ```bash
 npm install -g menv-npm
 ```
 
-### As a development dependency
-
-If you prefer to install it per-project:
-
-```bash
-npm install menv-npm --save-dev
-```
-
 ## Quick Start
 
-Generate your initial `.env.example`:
+### 1. Just cloned a repo?
+
+Bootstrap your project by discovering environment variables from the codebase:
 
 ```bash
-# If installed globally:
-menv generate
-
-# If installed locally:
-npx menv generate
+menv generate --scan --comment
 ```
 
-Check if your environment is in sync:
+This scans your source files for `process.env` references and creates a documented `.env.example`.
+
+### 2. Already have a .env?
+
+Sync it with your example template:
 
 ```bash
-npx menv-npm sync
+menv sync
 ```
 
-Validate requirements for CI:
+### 3. CI/CD Validation
+
+Ensure all required variables are present before deployment:
 
 ```bash
-npx menv-npm check
+menv check
 ```
 
 ## Commands
 
-| Command    | Usage               | Description                                                    |
-| ---------- | ------------------- | -------------------------------------------------------------- |
-| `generate` | `menv-npm generate` | Creates or updates .env.example from .env                      |
-| `sync`     | `menv-npm sync`     | Compares .env and .env.example for inconsistencies             |
-| `check`    | `menv-npm check`    | Validates that all variables in the example file exist locally |
-| `watch`    | `menv-npm watch`    | Monitors .env for changes and updates the example file         |
-| `doctor`   | `menv-npm doctor`   | Scans all environment files for potential secret leaks         |
+| Command    | Usage           | Description                                                      |
+| ---------- | --------------- | ---------------------------------------------------------------- |
+| `generate` | `menv generate` | Creates .env.example from .env or source code (`--scan`)         |
+| `sync`     | `menv sync`     | Compares .env and .env.example (exits 1 on discrepancies)        |
+| `check`    | `menv check`    | Validates that all variables in the example file exist locally   |
+| `watch`    | `menv watch`    | Monitors .env for changes and updates the example file           |
+| `doctor`   | `menv doctor`   | Scans all environment files (`.env*`) for potential secret leaks |
+
+### Key Options
+
+- `--scan`: Discover variables from source files (supports `.js`, `.ts`, `.tsx`, etc.)
+- `--env <file>`: Override the automatic environment file discovery.
+- `--template <file>`: Specify a custom template file path.
+- `--format json`: Machine-readable output for `sync` and `check`.
+- `--comment`: (with `--scan`) Adds source location as a comment above each key.
 
 ## Community
 
