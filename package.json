@@ -1,6 +1,6 @@
 {
   "name": "menv-npm",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Managed environment variables for Node.js",
   "type": "module",
   "bin": {

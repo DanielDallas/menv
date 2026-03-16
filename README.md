@@ -2,7 +2,7 @@
 
 Managed Environment Variables for Node.js projects.
 
-[Official Website](https://menv.thedanieldallas.com) // [npm Package](https://www.npmjs.com/package/menv-npm)
+<a href="https://menv.thedanieldallas.com" target="_blank">Official Website</a> // <a href="https://www.npmjs.com/package/menv-npm" target="_blank">npm Package</a>
 
 Menv is a lightweight CLI designed to bring consistency, safety, and automation to environment variable management. It ensures that your development, production, and example environment files stay in sync while proactively protecting against accidental secret leaks.
 
