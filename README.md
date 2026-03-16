@@ -28,7 +28,7 @@ npm install -g menv-npm
 Bootstrap your project by discovering environment variables from the source code:
 
 ```bash
-menv generate --scan --comment
+npx menv-npm generate --scan --comment
 ```
 
 This scans your `.ts`, `.js`, `.tsx`, etc., for `process.env` references and creates a documented `.env.example`.
@@ -38,7 +38,7 @@ This scans your `.ts`, `.js`, `.tsx`, etc., for `process.env` references and cre
 Keep your template in sync with your actual configuration:
 
 ```bash
-menv sync
+npx menv-npm sync
 ```
 
 ### 3. CI/CD Validation
@@ -46,18 +46,18 @@ menv sync
 Ensure all required variables are present before deployment:
 
 ```bash
-menv check --format json
+npx menv-npm check --format json
 ```
 
 ## Commands
 
-| Command    | Usage           | Description                                                           |
-| ---------- | --------------- | --------------------------------------------------------------------- |
-| `generate` | `menv generate` | Creates `.env.example` from `.env` or source code (`--scan`)          |
-| `sync`     | `menv sync`     | Checks for template inconsistencies (exits 1 on discrepancies)        |
-| `check`    | `menv check`    | Validates that all variables in the example file exist locally        |
-| `watch`    | `menv watch`    | Monitors `.env` for changes and updates the example file in real-time |
-| `doctor`   | `menv doctor`   | Scans all environment files (`.env*`) for potential secret leaks      |
+| Command    | Usage                   | Description                                                           |
+| ---------- | ----------------------- | --------------------------------------------------------------------- |
+| `generate` | `npx menv-npm generate` | Creates `.env.example` from `.env` or source code (`--scan`)          |
+| `sync`     | `npx menv-npm sync`     | Checks for template inconsistencies (exits 1 on discrepancies)        |
+| `check`    | `npx menv-npm check`    | Validates that all variables in the example file exist locally        |
+| `watch`    | `npx menv-npm watch`    | Monitors `.env` for changes and updates the example file in real-time |
+| `doctor`   | `npx menv-npm doctor`   | Scans all environment files (`.env*`) for potential secret leaks      |
 
 ### Advanced Options
 
