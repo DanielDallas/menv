@@ -1,6 +1,5 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import pc from "picocolors";
 
 export interface ScanResult {
   key: string;
@@ -60,7 +59,7 @@ export async function scanSource(dir: string): Promise<ScanResult[]> {
           }
 
           // Warning for dynamic keys: process.env[dynamicVariable]
-          if (line.includes("process.env[") && !bracketMatches) {
+          if (line.includes("process.env[")) {
             // Simplified check: if it's process.env[ but not process.env[' or process.env["
             if (!/process\.env\[['"]/.test(line)) {
               // We won't warn for every single line but it's a good candidate for later improvement

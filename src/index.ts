@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import { cac } from "cac";
-import pc from "picocolors";
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const { version } = require("../package.json") as { version: string };
