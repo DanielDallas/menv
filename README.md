@@ -17,15 +17,30 @@ Menv is a lightweight CLI designed to bring consistency, safety, and automation 
 
 ## Installation
 
+For the best experience, install Menv globally to use it in any project:
+
+```bash
+npm install -g menv-npm
+```
+
+### As a development dependency
+
+If you prefer to install it per-project:
+
 ```bash
 npm install menv-npm --save-dev
 ```
 
-Generate your initial .env.example:
+## Quick Start
+
+Generate your initial `.env.example`:
 
 ```bash
-npx menv-npm generate
-# or install globally: npm install -g menv-npm
+# If installed globally:
+menv generate
+
+# If installed locally:
+npx menv generate
 ```
 
 Check if your environment is in sync:
