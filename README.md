@@ -1,8 +1,8 @@
 # Menv NPM
 
-<!-- v0.1.0-alpha.11 -->
-
 Managed Environment Variables for Node.js projects.
+
+[Official Website](https://menv.thedanieldallas.com) // [npm Package](https://www.npmjs.com/package/menv-npm)
 
 Menv is a lightweight CLI designed to bring consistency, safety, and automation to environment variable management. It ensures that your development, production, and example environment files stay in sync while proactively protecting against accidental secret leaks.
 
@@ -24,7 +24,6 @@ npm install menv-npm --save-dev
 Generate your initial .env.example:
 
 ```bash
-# Recommended for one-off use:
 npx menv-npm generate
 # or install globally: npm install -g menv-npm
 ```

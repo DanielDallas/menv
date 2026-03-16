@@ -1,6 +1,6 @@
 # Contributing to Menv
 
-First off, thank you for considering contributing to Menv! It's people like you that make Menv such a great tool for the community.
+Menv is built for the community. If you find a bug or want to improve the logic, we welcome your contributions.
 
 ## How to Contribute
 

@@ -1,8 +1,8 @@
-# Contributor Covenant Code of Conduct
+# Code of Conduct
 
-## Our Pledge
+## Our Goal
 
-As contributors and maintainers, we pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+We are committed to making participation in the Menv project a harassment-free experience for everyone. We welcome all contributors and expect mutual respect and professional behavior in all project spaces.
 
 ## Our Standards
 
