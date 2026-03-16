@@ -52,9 +52,9 @@ npx menv-npm check
 
 ## Community
 
-| Documentation                         | Description                                |
-| ------------------------------------- | ------------------------------------------ |
-| [Contributing](CONTRIBUTING.md)       | Learn how to get started with contributing |
-| [Code of Conduct](CODE_OF_CONDUCT.md) | Our standards for a healthy community      |
-| [Security](SECURITY.md)               | Procedures for reporting security issues   |
-| [License](LICENSE)                    | MIT Open Source License                    |
+| Documentation                         | Description                                                                   |
+| ------------------------------------- | ----------------------------------------------------------------------------- |
+| [Contributing](CONTRIBUTING.md)       | Learn how to get started with contributing                                    |
+| [Code of Conduct](CODE_OF_CONDUCT.md) | Our standards for a healthy community                                         |
+| [Security](SECURITY.md)               | Procedures for reporting security issues                                      |
+| [License](LICENSE)                    | MIT Open Source License by [TheDanielDallas.com](https://thedanieldallas.com) |
